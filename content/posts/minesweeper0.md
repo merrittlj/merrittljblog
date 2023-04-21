@@ -1,10 +1,11 @@
 ---
-title: "Reversing and Patching Minesweeper Part 0 — Introduction"
+title: "Reversing and Patching Minesweeper Part 0 -- Introduction"
 date: 2022-08-02T00:00:00-00:00
 ---
 
 Hello readers, and welcome to my first article I’ve wrote and the first in this series. In this series we will be **Reverse Engineering** a basic, old **Windows Minesweeper binary** and **creating custom patches** for our desired functionality.
 
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/minesweep0title.png)
 ###### This is going to be a fun series.
 
 ### **My goal for this series**
@@ -19,19 +20,22 @@ As **Reverse Engineering** is pretty complex in general, we will need a couple t
 
 For this series, we will use a simple **Windows Minesweeper** binary(found [**here**](http://www.minesweeper.info/downloads/WinmineXP.html)). We will be **looking through** and **investigating** the multiple functionalities of this program, and then we will **apply patches** to make it do what we desire.
 
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/target.png)
 ###### Our target program
 
 ### **Your favorite Reverse Engineering Tool**
 
 There is **many** awesome and incredibly useful programs out there for **Reverse Engineering**, but in this tutorial we will be using **_Ghidra_**, and **very useful** and popular tool developed by the **_NSA_**. It is **free**, and is seen to many as a **strong competitor to _IDA Pro_, another(paid) extensive tool**. You can download it [**here**](https://github.com/NationalSecurityAgency/ghidra/releases).
 
-###### Made by the **NSA**! That’s how you know it will be good. Credit:  [**ghidra-sre.org**](https://ghidra-sre.org/images/GHIDRA_1.png)
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/ghidra.png)
+###### Made by the **NSA**! That’s how you know it will be good. Credit: [**ghidra-sre.org**](https://ghidra-sre.org/images/GHIDRA_1.png)
 
 ### **Cheat Engine**
 
 **Cheat Engine** is useful for many things, mainly some of the features that **_Ghidra_ doesn’t have**. With Cheat Engine, if you think some code is doing something, you can easily **test it using breakpoints** and see what certain **variables are** as well, or you could track certain **addresses** and their **value** throughout execution. You can find it [**here**](https://www.cheatengine.org/).
 
-Cheat Engine with Windows dark mode.
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/ce.png)
+###### **Cheat Engine** with Windows dark mode.
 
 ### **A good understanding of how computers work at a low level(and how to operate one in general)**
 
@@ -46,14 +50,11 @@ There are **many great places** to learn either coding or Assembly on the World 
 *   Combining your knowledge with both: [**Godbolt Compiler Explorer**](https://godbolt.org/)
 *   Going further with your knowledge: [**Crackme Practice**](https://crackmes.one/)
 
-<figure>
-<p align="center">
-   <img src="imgsrc"/>
-   <figcaption>A peek into some interesting code in <b>Ghidra</b>.</figcaption>
-</p>
-</figure>
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/peek.png)
+###### A peek into some interesting code in **Ghidra**.
 
-###### The default [**godbolt.org**](https://godbolt.org/) webpage.
+![](https://github.com/merrittlj/merrittljblog/raw/main/assets/godbolt.png)
+###### The default [**godbolt.org**](https://godbolt.org/) webpage
 
 ### **Summary**
 
