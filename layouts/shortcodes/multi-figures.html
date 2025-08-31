@@ -1,0 +1,61 @@
+{{/* multi-figures shortcode */}}
+
+{{ $images := split (.Get "images") "," }}
+{{ $count := len $images }}
+{{ $class := .Get "class" | default "" }}
+{{ $lightbox := .Get "lightbox" | default "" }}
+{{ $galleryWidth := .Get "width" | default "100%" }}
+{{ $caption := .Get "caption" | default "" }}
+{{ $perRow := int (.Get "row" | default 0) }}
+{{ $ctx := . }}
+
+{{/* Determine per-figure width based on number of images */}}
+{{ $figureWidth := "100%" }}
+{{ if ge $perRow 4 }}
+  {{ $figureWidth = printf "%.2f%%" (sub (div (float 100) (float $perRow)) 1) }}
+{{ else if eq $count 2 }}
+  {{ $figureWidth = "49%" }}
+{{ else if eq $count 3 }}
+  {{ $figureWidth = "32%" }}
+{{ end }}
+
+<div class="multi-figures {{ $class }}" style="width: {{ $galleryWidth }}; margin:0 auto; display:flex; flex-wrap:wrap; gap:1%; justify-content:flex-start;">
+
+  {{ range $images }}
+    {{ $img := trim . " " }}
+    {{ $permalink := $ctx.Page.Permalink }}
+    {{ $image_link_absolute := (findRE "^/" $img) }}
+
+    <figure style="flex: 0 0 {{ $figureWidth }}; margin:0;">
+      <a 
+        {{ if $ctx.Get "lightbox" }}
+          data-lightbox="{{ $ctx.Get "lightbox" | markdownify | plainify }}"
+        {{ else }}
+          data-lightbox="image-{{ $img }}"
+        {{ end }}
+        {{ if $image_link_absolute }}
+          href="{{ $img | absURL }}"
+        {{ else }}
+          href="{{ (printf "%s%s" $permalink $img) }}"
+        {{ end }}>
+        <img
+          {{ if $image_link_absolute }}
+            src="{{ $img | absURL }}"
+          {{ else }}
+            src="{{ (printf "%s%s" $permalink $img) }}"
+          {{ end }}
+          alt="{{ $img | plainify }}"
+          style="width:100%; height:auto; display:block; border-radius:4px;"
+        />
+      </a>
+    </figure>
+  {{ end }}
+
+  {{ if $caption }}
+    <div class="multi-figures-caption" style="width:100%; text-align:center; font-size:0.85em; margin-top:0.5em; color:#666;">
+      {{ $caption }}
+    </div>
+  {{ end }}
+
+</div>
+

@@ -1,0 +1,17 @@
+.multi-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;               /* space between images */
+  margin: 0 auto;
+}
+
+.multi-figures figure {
+  margin: 0;
+}
+
+.multi-figures img {
+  width: 100%;            /* fill the figure */
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}

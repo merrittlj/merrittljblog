@@ -59,6 +59,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 # Configure markup highlighter to match "Bearblog" aesthetics, see
 # https://gohugo.io/configuration/markup/#highlight
 [markup]
+  defaultMarkdownHandler = "goldmark"
   [markup.highlight]
     style = 'friendly'
     lineNos = true
