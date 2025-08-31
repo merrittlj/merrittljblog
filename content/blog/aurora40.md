@@ -5,8 +5,6 @@ date = "2025-08-30T14:48:57-06:00"
 description = "The Aurora40 Keyboard"
 
 tags = ["hardware","open source","project","software"]
-
-draft = true
 +++
 
 [Full Github repo](https://github.com/merrittlj/aurora40)
@@ -75,12 +73,38 @@ The design itself was not too interesting or different from essentially every ot
     lightbox="case"
 >}}
 
+For the case, I chose to use Openscad(through SolidPython) for a few reasons. First, I believe that such an approach to CAD is really innovative and a concept that should be explored in further depth, as it holds many advantages in terms of prototypability as well as ease of use. Openscad actually shares many similarities with NixOS in terms of defining things declaratively, and comes with the many mental benefits of such an approach(see my [NixOS post](https://merrittlj.github.io/my-nixos-experience/) for further detail). In one screen of code I can visualize the entire model as well as easily make major changes during prototyping by simply changing some variables. Although those who are completely inexperienced with programming in general might find Openscad to be more difficult than other CAD softwares, it seriously has many ease-of-use benefits if you are even somewhat familiar. Personally, Openscad makes it a lot easier to design precise models, as measurements and specifications are clearly defined in variables rather than having to keep it all in a mental context. Finally, learning a traditional CAD software would be very overkill and time-intensive for me, even to design such a simple case model, and especially given the heavily proprietary nature of much CAD software, these skills would not be very transferable, while Openscad on the other hand is completely free in freedom and in beer, and the skills learned through it(e.g. learning to define complex systems in simple language) is actually extremely transferrable.
+
+I've made keyboards before with no case and simply rubber bumpers on the PCB, but I felt that a case would greatly benefit this to make it a more complete and functional product, as well as aesthetically being very pleasing to have a flush and finished case. After all, adding a case would have little to no additional height added to the total keyboard but would bring about many benefits.
+
+I also chose to forgo mounting holes or standoffs on both the PCB and the case, in the hopes of reducing complexity, and because I felt as a simpler solution would simply be to "friction fit" it(as in print the case with little extra room and squeeze the PCB in).
+
 ## ZMK
 [ZMK repo](https://github.com/merrittlj/zmk-config-aurora40)
 {{< multi-figures
-    images="/images/aurora40/schematic.png"
+    images="/images/aurora40/zmk-keymap.png"
     lightbox="zmk"
 >}}
+
+I have used ZMK recently for a minor project, but this has been the first time that I really fully set it up myself and was able to see the benefits over software such as QMK. The design and philosophy of ZMK for ease-of-use as well as a from-scratch modern codebase optimized for what matters(e.g. one focus of ZMK is battery life) really appealed to me, and I can't imagine using other softwares for any future keyboards.
+
+Some of the terms it uses can be confusing at times(modules, dtsi, defconfig, devicetree) can be confusing at first, but once you understand them abstractly, it is very easy to work with and modify for your specific needs.
+
+Keymap-wise, I have used Dvorak for multiple years now, but have recently started learning and shifting to better designed alternate layouts, and am currently learning the Heyyou layout by ClemenPine(this is relatively obscure). My main goal with the 5x4 layout of the keyboard was to have a standard and interchangable 30 key layout on the top three rows(no number row!), and to use the bottom row for space, enter, etc. as well as layer switches. I have found that personally from my Iris keymap, relegating common symbols to a seperate layer accessible on an easy thumb-key was very comfortable and practical, so I replicated that here. I plan on adding a system or function layer soon with common utility keys or macros, as I have seen this approach work well on many other keyboards.
+
+## Shopping list
+A basic rundown of everything that I bought for this keyboard, all on typeractive.xyz:
+- [MBK keycaps in various colors](https://typeractive.xyz/products/mbk-keycaps) - (10 1u) x4
+- [nice!nano v2](https://typeractive.xyz/products/nice-nano) - x2
+- [Choc Pink switches](https://typeractive.xyz/products/choc-switches) - 10 x4
+- [110mAh battery](https://typeractive.xyz/products/lithium-battery-110mah) - x2
+- [Power switch](https://typeractive.xyz/products/power-switch) - 2 x1
+- [Reset switch](https://typeractive.xyz/products/reset-button) - 2 x1
+- [Tenting/rubber feet](https://typeractive.xyz/products/tenting-feet) - x1
+
+Total cost: ~$116.5
+
+The PCB itself was ordered from JLCPCB for only about $5, although shipping was not very cheap.
 
 ## Gallery
 {{< multi-figures
@@ -88,3 +112,5 @@ The design itself was not too interesting or different from essentially every ot
     lightbox="gallery"
     row="4"
 >}}
+
+#### If you enjoy my writing style or want to see more things from me, consider checking out my [Github](https://github.com/merrittlj/) or reading [my other posts](https://merrittlj.github.io/blog/).
