@@ -6,7 +6,7 @@ description = "AI and the value of code"
 
 tags = ["opinion","software",]
 
-draft = true
+draft = false
 +++
 
 ## Intro
@@ -26,4 +26,10 @@ The rock of course provides value to the builder, it helps them in their goal, b
 ## So what?
 As it may have become obvious, the builder is the modern-day software developer and the rock is code itself. What is the rock on a stick? Largely, this can apply to any technological innovation increasing developer productivity, but in this case it is AI.
 
-I would argue that like a madman with a rock, someone who can *purely* write code has no real value. The value in a programmer
+I would argue that like a madman with a rock, someone who can *only* write code has no real value. Essentially everyone who can write code has real value, but this is not due to the code itself. As with how the value in a builder is within their work, similarily the value in a programmer is within what they actually create, their real impact. In a simplistic sense, a monkey can use a typewriter, but its random strokes of keypresses have little value(except of course the nearly impossible chance of producing Shakespeare).
+
+In the broader scope of things, programmers should not resist the development of AI and similar technological advances; these advances merely further help achieve the overarching goal of a programmer. Programmers in the core sense will not be "replaced by AI" as the public opinion seems to push so much. The core role of the programmer is not to write code necessarily, but it is rather to harness technology and use it effectively to have an impact. Thus, regardless of how well AI(eg. LLMs) can write code, the job of the programmer persists. While the methods of harnessing technology and achieving their goal, the "tools of the builder", may change significantly, the programmer will not be replaced, as the need for technological utilization will always persist no matter the underlying technology.
+
+Now that it is established that programmers will not lose their jobs and purpose in the sense that many say, why is there still resistance to the adoption of these new technologies? Simply, as with anything, there are many social and psychological reasons to address regarding the usage of AI for developer productivity. If it remains reasonably effective, naturally many people will take the path of least resistance of simply persisting in their current ways. The rock on a stick might be such a fundamentally different paradigm to the rock-wielding builders that adopting the rock on a stick might cause temporary losses in productivity or efficiency. 
+
+I am neither an "AI-positive" or an "AI-negative" developer, as many seem to side with in the public eye, in the sense that I will religiously spearhead or condemn any AI code-writing tools. AI itself is not even in consideration. I am impact-driven.
