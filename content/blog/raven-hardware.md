@@ -7,10 +7,10 @@ description = "Personal project - Raven"
 tags = ["project", "hardware", "raven"]
 +++
 
-[GitHub profile](https://github.com/merrittlj)
-[raven-hardware repository](https://github.com/merrittlj/raven-hardware)
-[schematic pdf](https://github.com/merrittlj/raven-hardware/releases/download/v1.0.0/kicad_v100.pdf)
-[parts spreadsheet](https://docs.google.com/spreadsheets/d/1oSL-olhkF5xc7F7o5_qvC-SHkViK23rOYAubs1avKWQ/edit?usp=sharing)
+- [GitHub profile](https://github.com/merrittlj)
+- [raven-hardware repository](https://github.com/merrittlj/raven-hardware)
+- [schematic pdf](https://github.com/merrittlj/raven-hardware/blob/master/kicad.pdf)
+- [parts spreadsheet](https://docs.google.com/spreadsheets/d/1oSL-olhkF5xc7F7o5_qvC-SHkViK23rOYAubs1avKWQ/edit?usp=sharing)
 
 # Hardware
 This is the third post regarding my current project, the Raven smartwatch. In this post, I will be discussing the general hardware design and choices, as well as the lower-level aspects of the hardware.

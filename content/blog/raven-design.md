@@ -7,7 +7,7 @@ description = "Personal project - Raven"
 tags = ["project", "software", "raven"]
 +++
 
-[GitHub profile](https://github.com/merrittlj)
+- [GitHub profile](https://github.com/merrittlj)
 
 # Intro
 This is the first of multiple blog posts regarding a project I have been working on for the past few months. With this project (unlike previous projects) I have seriously attempted to plan, design, and document all aspects of the project during the phases of the project. In this post, I will discuss my thoughts on the design and planning of the project in its current stance. Posts regarding hardware, software, and UI/UX will follow shortly after this post.

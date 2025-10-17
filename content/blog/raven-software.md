@@ -7,9 +7,9 @@ description = "Personal project - Raven"
 tags = ["project", "software", "raven"]
 +++
 
-[GitHub profile](https://github.com/merrittlj)
-[raven(embedded software) repository](https://github.com/merrittlj/raven)
-[raven-gb(GadgetBridge) repository](https://github.com/merrittlj/raven-gb)
+- [GitHub profile](https://github.com/merrittlj)
+- [raven(firmware) repository](https://github.com/merrittlj/raven)
+- [raven-gb(GadgetBridge) repository](https://github.com/merrittlj/raven-gb)
 
 # Software
 This is the second blog post out of multiple that I am posting regarding my project, the Raven smartwatch. See the first article for a broader introduction on this project, to fully understand the usage of the technologies introduced here. By the way, all of the software and hardware of this project are open-source.
